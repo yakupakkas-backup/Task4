@@ -1,4 +1,4 @@
-package Utilities;
+package com.task4.Utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Platform;

@@ -1,4 +1,4 @@
-package Runners;
+package com.task4.Runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -7,10 +7,10 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {"json:target/cucumber.json",
-                "html:target/default-html-reports"},
+                "html:target/default-html-reports/reort.html"},
         features = "src/test/resources/Features",
-        glue = "src/test/java/StepDefs",
-        dryRun = true,
+        glue = "com/task4/StepDefs",
+        dryRun = false,
         tags = "@wip"
 )
 

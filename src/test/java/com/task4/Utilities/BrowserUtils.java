@@ -1,4 +1,4 @@
-package Utilities;
+package com.task4.Utilities;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
@@ -118,7 +118,7 @@ public class BrowserUtils {
      * @param timeout
      * @return
      */
-    public static WebElement waitForClickablility(WebElement element, int timeout) {
+    public static WebElement waitForClickabilility(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.get(), timeout);
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
@@ -346,16 +346,16 @@ public class BrowserUtils {
      * This method will recover in case of exception after unsuccessful the click,
      * and will try to click on element again.
      *
-     * @param by
+     * @param webElement
      * @param attempts
      */
-    public static void clickWithWait(By by, int attempts) {
+    public static void clickWithWait(WebElement webElement, int attempts) {
         int counter = 0;
         //click on element as many as you specified in attempts parameter
         while (counter < attempts) {
             try {
                 //selenium must look for element again
-                clickWithJS(Driver.get().findElement(by));
+                clickWithJS(webElement);
                 //if click is successful - then break
                 break;
             } catch (WebDriverException e) {
@@ -375,9 +375,6 @@ public class BrowserUtils {
      *    * necessarily mean that the element is visible.
 
      */
-
-
-
 
         public static String getScreenshot(String name) throws IOException {
             // name the screenshot with the current date time to avoid duplicate name
