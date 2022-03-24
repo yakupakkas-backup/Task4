@@ -11,8 +11,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import static org.junit.Assert.*;
-import org.openqa.selenium.By;
+
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 public class SummerDeressesStepDef {
     MainPage mainpage = new MainPage();
@@ -36,19 +37,19 @@ public class SummerDeressesStepDef {
     }
 
     @And("User Proceed To Checkout")
-    public void userProceedToCheckout()  {
+    public void userProceedToCheckout() {
         summerDresses.proceedToChecout();
     }
 
     @Then("verify that summer dresses can be added to the cart")
     public void verifyThatSummerDressesCanBeAddedToTheCart() {
-//        BrowserUtils.waitForClickabilility(checkoutPage.checkoutElement,3);
-        assertNotEquals(cartPage.totalProductElement.getAttribute("value"),"0");
+        assertNotEquals(cartPage.totalProductElement.getAttribute("value"), "0");
     }
 
     @And("verify that it’s possible to proceed to the Sign in section")
     public void verifyThatItSPossibleToProceedToTheSignInSection() {
         cartPage.proceedTocheckoutMethod();
+        //BrowserUtils.waitForPresenceOfElement(checkoutPage.alreadyRegisteredElement,"Already registered?",3);
         BrowserUtils.waitForPageToLoad(3);
         assertTrue(checkoutPage.alreadyRegisteredElement.isDisplayed());
     }

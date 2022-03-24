@@ -19,7 +19,7 @@ public class CartPage {
 
     public void proceedTocheckoutMethod() {
         try {
-            BrowserUtils.waitForClickabilility(proceedTheckoutElement,5);
+            BrowserUtils.waitForClickabilility(proceedTheckoutElement, 5);
             BrowserUtils.clickWithJS(proceedTheckoutElement);
         } catch (Exception e) {
             BrowserUtils.clickWithWait(proceedTheckoutElement, 5);
