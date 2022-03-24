@@ -6,7 +6,7 @@ Feature: Summer Dresses
     When User clicks on the product that wants to purchase and add it to the cart
     And User Proceed To Checkout
     Then verify that summer dresses can be added to the cart
-    And verify that it’s possible to to proceed to the Sign in section
+    And verify that it’s possible to proceed to the Sign in section
 
 
 
