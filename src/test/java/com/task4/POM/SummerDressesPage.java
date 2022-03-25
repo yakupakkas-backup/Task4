@@ -2,12 +2,16 @@ package com.task4.POM;
 
 import com.task4.Utilities.BrowserUtils;
 import com.task4.Utilities.Driver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 import java.util.Random;
+import java.util.WeakHashMap;
 
 public class SummerDressesPage {
 
